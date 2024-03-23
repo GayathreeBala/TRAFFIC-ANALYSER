@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Analysis Result</title>
+</head>
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,700" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+
+<style>
+.sec1{
+    background-image: linear-gradient(rgba(17, 17, 17, 0.689), rgba(13, 13, 13, 0.689)), url("https://i.pinimg.com/originals/6e/14/5b/6e145b73d0cb9f47fce500960defc866.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    height: auto;
+    margin:0;
+    margin-top:0;
+    padding:0;
+
+}
+.nav_bar{
+    height: 13vh;
+    text-decoration: none;
+    color:white !important;
+}
+.nav_bar-brand{
+    margin-left:3vh;
+    margin-top: 3vh;
+    text-decoration:none ;
+    color:white;
+    font-size: 3vh;
+
+    font-weight: 600;
+}
+@keyframes fadein{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+.m{
+    
+    /* background-color: rgba(255, 255, 255, 0.552); */
+font-size: 6vh;
+color:white;
+margin:auto;
+margin-top:-10;
+padding:10vh;
+animation: fadein 1s ease-in;
+}
+#get{
+padding:10px;
+width:200px;
+font-size: 3vh;
+border-radius: 50px;
+font-family:'Raleway', sans-serif ;
+font-weight: 30vh;
+color:white;
+background-color: #FC888C;
+border-width: 0;
+animation: enlarge 5s infinite ease
+}
+input{
+    padding:10px;
+width:200px;
+font-size: 3vh;
+border-radius: 50px;
+font-family:'Raleway', sans-serif ;
+font-weight: 20vh;
+color:black;
+border-width: 0;
+margin:10px
+}
+@keyframes enlarge{
+    0%,100%{
+        transform: translateY(40px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.column {
+    flex-basis: 45%;
+    background-color: rgba(255, 255, 255, 0.788);
+    padding:15px;
+    border-radius:30px;
+    animation: fadein 2s ease-in;
+}
+#face {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    padding:0px;
+    
+}
+
+#message{
+    font-size: 3vh;
+    font-weight: 700;
+    text-align: center;
+}
+.hide-on-mobile{
+
+}
+@media (max-width: 480px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+.shrink{
+@media(max-width: 480px){
+.shrink{
+    width:auto;
+    font-size: 2vh;
+}
+}}
+
+</style>
+
+<body style="margin:0 ; font-family: 'Raleway', sans-serif;font-weight: 30vh;color:white">
+<section class="sec1 m-0">
+    <nav class="nav_bar fixed-top navbar-light" style="background-color: #FC888C;">
+       
+        <img src="https://cdn-icons-png.flaticon.com/512/4770/4770219.png" style="width:100px; float:left; margin-left:30px;">
+        <br>
+        <a class="nav_bar-brand" href=" /#con" >Analyse the Traffic</a>
+        <a class="nav_bar-brand" href="/#z">Know Traffic Rules</a>
+        <a class="nav_bar-brand" href="/#r">References</a>
+<br>
+    
+    </nav>
+    
+        <section class="m " style="display: block;" id="con"><br><br>
+            <p class="m-0" style="text-align: center; margin-top: 0;"><b>Image Analysis Result</b></p>
+            <p style="font-size: 4vh; text-align: center;">Now, know whether to move through this route or not.</p>
+          
+                
+                <section class="container shrink">
+                    <section class="column hide-on-mobile">
+                        <b>Processed Image</b>
+                        <img src="{{ output_image_path }}" alt="Processed Image" width="400" height="300" style="font-size: 2vh; display: flex;justify-content:center ; align-items: center;" class=" hide-on-mobile">
+                    </section>
+                    <section class="column">
+                        <b>Analysis Results</b>
+                        <div style="font-size: 3vh;">Total Vehicles: <b id="result_count" STYLE="font-size: 4vh;">{{ result_count }}</b></div>
+                        <div id="face" style="margin-top: 0px;" class="m-0"></div><br>
+                        <div id="message"></div>
+                    </section>
+                </section></section>
+                    <div style="background-color: #FC888C;height:auto;padding:2vh;color:white; font-size: 3vh;text-align: center;font-weight: 700; margin: 0px;width:100%">@CREATED BY GAYATHREE <BR></div>
+                   
+                    <script>
+  let result_count = parseInt(document.getElementById("result_count").innerText);
+let total = result_count;
+let countElement = document.getElementById('result_count');
+let count = 0;
+
+function updateCount() {
+    if (result_count == 0) {
+        count = 0;
+    }
+
+    countElement.innerText = count;
+    count++;
+    if (count <= result_count) {
+        setTimeout(updateCount, 100);
+    }
+}
+
+updateCount();
+
+
+
+                        if (total <= 10) {
+                            document.getElementById('face').innerHTML = '<img src="https://listemoji.com/img/emoji/using/slightly-smiling-face-1f642-mozilla.png" style="width:150px">';
+
+                            document.getElementById('message').innerText = 'YOU CAN USE THIS WAY';
+                            message.style.color="#77DD77";
+                        } else if (total <= 20) {
+                            document.getElementById('face').innerHTML = '<img src="https://www.dictionary.com/e/wp-content/uploads/2018/08/sleeping-face-emoji1-300x300.png" style="width:150px">';
+                            document.getElementById('message').innerText = 'DRIVE WITH PATIENCE, YOU MIGHT REACH YOUR DESTINATION A BIT SLOWER';
+                            document.getElementById('message').innerText = 'DRIVE WITH PATIENCE, YOU WILL REACH A BIT SLOW';
+                            message.style.color="#77DD77";
+                        
+                        
+                        } else if (total <= 50) {
+                            document.getElementById('face').innerHTML = '<img src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/52931/fearful-face-emoji-clipart-xl.png" style="width:150px">';
+                            document.getElementById('message').innerText = 'CONSIDER FINDING ANOTHER ROUTE';
+                            message.style.color=" #FDFD96";
+                        } else {
+                            document.getElementById('face').innerHTML = '<img src="https://static-00.iconduck.com/assets.00/astonished-face-emoji-2048x1859-h5a8fyeh.png" style="width:150px">';
+                            document.getElementById('message').innerText = 'YOU ARE DEAD USING THIS ROUTE';
+                            message.style.color="#FC888C";
+                        }
+                    </script>
+                </body>
+                </html>

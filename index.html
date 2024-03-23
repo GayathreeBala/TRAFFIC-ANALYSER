@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  </head>
+
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,700" rel="stylesheet">
+
+<style>
+.sec1{
+    background-image: linear-gradient(rgba(17, 17, 17, 0.689), rgba(13, 13, 13, 0.689)), url("https://i.pinimg.com/originals/6e/14/5b/6e145b73d0cb9f47fce500960defc866.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:auto;
+    margin:0;
+    margin-top:0;
+    padding:0;
+
+}
+.nav_bar{
+    HEIGHT:auto;
+    max-height: 
+    
+    text-decoration: none;
+    color:white;
+}
+.nav_bar-brand{
+    margin-left:3vh;
+margin-left:10px;
+    text-decoration:none ;
+    color:white;
+    font-size: 3vh;
+
+    font-weight: 600;
+}
+@keyframes fadein{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+.m{
+    
+    display: block;
+    text-align: center;
+    /* background-color: rgba(255, 255, 255, 0.552); */
+font-size: 6vh;
+color:white;
+width:;
+margin:auto;
+padding:10vh;
+animation: fadein 1s ease-in;
+}
+#get{
+padding:10px;
+width:200px;
+font-size: 3vh;
+border-radius: 50px;
+font-family:'Raleway', sans-serif ;
+font-weight: 30vh;
+color:white;
+background-color: #FC888C;
+border-width: 0;
+animation: enlarge 5s infinite ease
+}
+input{
+    padding:10px;
+width:200px;
+font-size: 3vh;
+border-radius: 50px;
+font-family:'Raleway', sans-serif ;
+font-weight: 20vh;
+color:black;
+border-width: 0;
+margin:10px
+}
+@keyframes enlarge{
+    0%,100%{
+        transform: translateY(40px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+}
+.fadein{
+    animation:fadein 1s ease-in;
+}
+.fadein1{
+    animation:fadein 2s ease-in;
+
+}
+.fadein2{
+    animation:fadein 3s ease-in;
+
+}
+.z{
+    background-color: #fc888c83;
+    margin-top: 0;;
+}
+.r{
+    text-align: left;
+    justify-content: justify;
+    margin-left: 7vh;
+    
+    font-size: 3.5vh;
+}
+.l{
+    text-align: right;
+    justify-content: justify;
+    margin-right: 7vh;
+       font-size: 3.5vh;
+
+}
+#r{
+    margin-left: 7vh;
+    font-size: 3vh;
+    font-weight: 500;
+  
+}
+.l img, .r img{
+    width: 300px;;
+}
+.hide-on-mobile{
+
+}
+@media (max-width: 480px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+</style>
+
+<body style="margin:0 ; font-family: 'Raleway', sans-serif;font-weight: 30vh;">
+<section class="sec1 m-0">
+    <nav class="nav_bar fixed-top nav_bar-light" style="background-color: #FC888C;">
+       
+        <img src="https://cdn-icons-png.flaticon.com/512/4770/4770219.png" style="width:100px; float:left; margin-left:30px;">
+        <br>
+        <a class="nav_bar-brand" href=" #con" onclick="swap()">Analyse the Traffic</a>
+        <a class="nav_bar-brand" href=" #z" onclick="swap1()">Know Traffic Rules</a>
+        <a class="nav_bar-brand" href=" #r" onclick="swap1()">References</a>
+
+        <br>
+      </nav>
+      <br>
+      <section class="m" style="display: block;" id="con">
+        <br><br>
+<B>TRAFFIC!! TRAFFIC!! TRAFFIC!!</B>
+<SECTION style="font-size: 3vh;font-weight: 54VH"><p>Uff! It is Frustrating to move out on a Traffic-Day. </p>
+<p>Unfortunatly, it is something that we cant help.</p>
+<p>However, we can help you know if the traffic is high, based on the</p>
+<B>IMAGES YOU GIVE US!</B>
+</SECTION>
+   
+<button id="get" onclick="return swap()" style="margin:auto;justify-content: center;">Get Started</button><br><br><br></section></section>
+    <!-- <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data" style="display: none;background-size: cover;height:100vh" class="sec1">
+
+        <section class="m" ><br>
+            <B>KNOW THE TRAFFIC!</B>
+            <SECTION style="font-size: 3vh;font-weight: 500"><p>Upload an image, and know the traffic</p>
+            <B>FASTER THAN THE CAR!!</B>
+            </SECTION><br>
+            <DIV style="background-color: rgba(255, 255, 255, 0.466);border-radius: 50px;">
+                <b style= "font-size: 4vh;">UPLOAD:</b>
+        <input type="file" name="image" id="image" style="font-family: 'Raleway', sans-serif;" >
+        <input type="submit" value="Upload"></DIV>
+    </form> -->
+
+    <div id="root"></div>
+
+</section>
+    <section id="con1" style="display: block;">
+        <section class="z" id="z"><BR><BR>
+            <h1 class="fadein"><center><b>KNOW TRAFFIC RULES</b></center></h1><BR><BR>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="r fadein1">
+                            <p style="text-align: justify;margin:30px;"><b>OBEY SPEED LIMITS:</b> Drivers should never exceed the recommended speed guidelines on roads, as doing so will draw the ire of traffic cops.
+                                As per a report, 66% of accidents in 2018 were caused due to speeding on Indian roads.
+                                The fine charged for speeding varies as per the size of your vehicle, typically ranging between Rs.1000 and Rs.2000.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 .hide-on-mobile fadein2">
+                        <img src="https://cdn.dribbble.com/users/44179/screenshots/1673488/slowdown.gif" width="300" style="align-items: center;display: flex;justify-content: center;margin:auto">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 order-md-2 fadein1">
+                        <div class="l">
+                            <p style="text-align: justify; margin:30px"><b>DON'T DRINK AND DRIVE:</b> As per the current law, the blood alcohol limit permissible for driving is up to 0.03%, which is equivalent to 30 mg of alcohol per 100 ml of blood.
+                                If an individual fails to pass this BAC test, he/she can be fined between Rs.2000 and Rs.10000, based on the final blood alcohol limit.
+                                Moreover, such individuals may also be sentenced to a prison term ranging between 7 months and four years.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 order-md-1 fadein2">
+                        <img src="https://i.pinimg.com/originals/ff/ff/15/ffff154fa23cd5c1d3c19a59d4943cea.gif" width="300" style="align-items: center;display: flex;justify-content: center;margin:auto;border-radius: 100px;;">
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="r fadein1">
+                            <p style="text-align: justify;margin:30px;"><b>WEAR SEAT BELTS:</b> If you are new to driving, get in the habit of securing the seat belt as the first thing you do upon entering your vehicle. Doing so will not only help you avoid traffic violations, but it will also save your life in case of mishaps.
+                                If you are caught driving without this seat belt around your waist and chest, traffic cops can fine you up to Rs.1000 for this violation.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 hide-on-mobile fadein2">
+                        <img src="https://media2.giphy.com/media/1WyDOyCDZ5gj0cQ1ly/giphy.gif" width="300" style="align-items: center;display: flex;justify-content: center;margin:auto">
+                    </div>
+                </div></div>
+
+                </section>
+            </div>
+      
+        
+        
+        
+<div style="background-color: rgba(77, 77, 77, 0.144);">
+<section  id="r" >
+    <BR><h2 style="font-size: 6vh;text-align: center;">References</h2>
+<p>Never be greedy about your work! Always aknowledge what helped you!</p>
+<P>My help is from: </P>
+    <li>stackoverflow.com
+    </li><li>
+    docs.github.com
+</li><li>
+    codeease.net
+</li><li> bing.com
+</li><li>
+    pythonguis.com
+</li><li>
+   
+    realpython.com
+</li><li>
+    
+    Emjois.Wiki
+</li><li>
+    Icondusk
+</li><li>
+   godigit.com</li>
+</ul>
+<br><br>
+</section>
+</div></section>
+<div style="background-color: #FC888C;height:auto;padding:2vh;color:white; font-size: 3vh;text-align: center;font-weight: 700;"><BR>@CREATED BY GAYATHREE <BR></div>
+
+
+<script>
+    import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+
+ReactDOM.render(<App />, document.getElementById('root'));
+
+    function swap() {
+    let form = document.getElementById("uploadForm");
+    let con = document.getElementById("con");
+    let con1 = document.getElementById("con1");
+    let z = document.getElementById("z");
+
+    if (form.style.display === "none") {
+        form.style.display = "block";
+        con.style.display = "none";
+        con1.style.display = "none";
+        z.style.display = "none"; // Hide the "Know Your Traffic Rules" section
+    } else {
+        form.style.display = "none";
+        con.style.display = "block";
+        con1.style.display = "block";
+        z.style.display = "block"; // Show the "Know Your Traffic Rules" section
+    }
+    return false; // Prevent form submission
+}
+function swap1(){
+    let form = document.getElementById("uploadForm");
+    let con = document.getElementById("con");
+    let con1 = document.getElementById("con1");
+    let z = document.getElementById("z");
+    form.style.display = "none";
+        con.style.display = "block";
+        con1.style.display = "block";
+        z.style.display = "block";
+}
+</script>
+
+
+</body>
+</html>
